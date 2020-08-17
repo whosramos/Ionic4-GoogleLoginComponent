@@ -1,0 +1,37 @@
+<!--- Header -->
+<ion-header>
+  <ion-navbar padding>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img padding src="assets/images/google-logo.png" />
+    <button ion-button float-right onClick="window.open('http://google.com/');">
+      GET IT FOR FREE
+    </button>
+  </ion-navbar>
+</ion-header>
+<!--- Content -->
+<ion-content>
+  <ion-grid>
+    <ion-row padding-horizontal no-margin>
+      <ion-col>
+        <ion-item text-center no-padding margin-vertical background-size no-lines *ngFor="let p of pages">
+          <button menuClose text-center transparent ion-item (click)="openPage(p)">
+        {{p.title}}
+      </button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row description padding-horizontal justify-content-center>
+      <ion-col border col-12>
+        <a href='http://google.com/'>Check full premium <br> version here</a>
+      </ion-col>
+    </ion-row>
+    
+      <!-- Description text -->
+      <ion-col col-12>
+        <p>For better understanding how our templates works <br> please <a href="https://csform.com/documentation-for-premium-login-component-for-ionic-three-themes/?_ga=2.221278872.1811753998.1522228601-994309764.1514560507">read our documentation</a></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
